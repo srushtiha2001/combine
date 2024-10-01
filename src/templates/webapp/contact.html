@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+{% load bootstrap4 %}
+
+{% block body %}
+
+
+<div class="social-icons position-relative">
+    <ul class="list-unstyled mb-0 position-absolute">
+        <li><a href="https://twitter.com/design_combine" class="text-decoration-none"><i class="fa-brands fa-twitter social-networks"></i></a></li>
+        <li><a href="https://www.facebook.com/Combinedesigninteriordesingstudio" class="text-decoration-none"><i class="fa-brands fa-facebook-f social-networks"></i></a></li>
+        <li><a href="https://www.instagram.com/combinedesigninteriors/" class="text-decoration-none"><i class="fa-brands fa-instagram social-networks"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/combine-design/" class="text-decoration-none"><i class="fa-brands fa-linkedin-in social-networks"></i></a></li>
+        <li><a href="https://www.youtube.com/@combinedesign" class="text-decoration-none"><i class="fa-brands fa-youtube social-networks"></i></a></li>
+    </ul>
+</div>
+<section class="sub-banner_section">
+    <figure class="banner-backgroundimage mb-0">
+        <img src="{% static 'assets/images/services-banner-image-new3.png' %}" alt="" class="img-fluid">
+    </figure>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-12 col-12">
+                <div class="banner_content" data-aos="fade-up">
+                    <h1>Contact Us</h1>
+                    
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-6 col-md-4 col-sm-12 col-12 d-lg-block d-none">
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<!-- Contact info -->
+<section class="contactinfo-section position-relative">
+<div class="container-fluid p-0">
+<!-- Contact map -->
+    <div class="contact_map_section position-relative">
+        <div class="row">
+            <div class="col-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.773648643612!2d77.5578245!3d12.922264600000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f57898d4347%3A0x433b818904180b60!2sCombine%20Design!5e0!3m2!1sen!2sin!4v1702549930509!5m2!1sen!2sin" width="1300" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="info_content">
+        <div class="row">
+            <div class="col-lg-7 col-md-8 col-sm-12 col-12 order-md-1 order-2">
+                <div class="badge c-black" id="badge2">
+                    <span class="badge__char"> </span>
+                    <span class="badge__char">W</span>
+                    <span class="badge__char">E</span>
+                    <span class="badge__char"></span>
+                    <span class="badge__char">C</span>
+                    <span class="badge__char">R</span>
+                    <span class="badge__char">E</span>
+                    <span class="badge__char">A</span>
+                    <span class="badge__char">T</span>
+                    <span class="badge__char">E</span>
+                    
+                </div>
+                <figure class="contactpage-rightborder mb-0">
+                    <img src="{% static 'assets/images/servicepage-imagerightborder.png' %}" alt="" class="img-fluid">
+                </figure>
+                <div class="content-box">
+                    <form  action="" method="POST">
+                        {% csrf_token %}
+                        {% bootstrap_form contact_form %}
+                        {% buttons %}
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        {% endbuttons %}
+    
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-4 col-sm-12 col-12 order-md-2 order-1">
+                <div class="contactpage_content" data-aos="fade-left">
+                    <h2>Get In Touch</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- Contact -->
+<section class="contactpage-section">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div class="box box1">
+                <div class="icon">
+                    <figure class="mb-0 contact-addressicon">
+                        <img src="{% static 'assets/images/contact-addressicon.png' %}" alt="" class="img-fluid">
+                    </figure>
+                </div>
+                <h5>Address</h5>
+                <p class="mb-0 text-size-16">Outer Ring Rd,Banashankari 3rd Stage, Bengaluru, 560085</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div class="box">
+                <div class="icon">
+                    <figure class="mb-0 contact-phoneicon">
+                        <img src="{% static 'assets/images/contact-phoneicon.png' %}" alt="" class="img-fluid">
+                    </figure>
+                </div>
+                <h5>Phone</h5>
+                <a href="tel:+919620200324" class="mb-0 text-decoration-none text-size-16">+91 96202 00324</a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div class="box">
+                <div class="icon">
+                    <figure class="mb-0 contact-emailicon">
+                        <img src="{% static 'assets/images/contact-emailicon.png' %}" alt="" class="img-fluid">
+                    </figure>
+                </div>
+                <h5>Email</h5>
+                <a href="mailto:combinedesigns2021@gmail.com" class="mb-0 text-decoration-none text-size-16">combinedesigns2021@gmail.com</a>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+{% endblock body %}

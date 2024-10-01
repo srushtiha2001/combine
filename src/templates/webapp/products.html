@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+
+{% block body %}
+
+
+<div class="social-icons position-relative">
+    <ul class="list-unstyled mb-0 position-absolute">
+        <li><a href="https://twitter.com/design_combine" class="text-decoration-none"><i class="fa-brands fa-twitter social-networks"></i></a></li>
+        <li><a href="https://www.facebook.com/Combinedesigninteriordesingstudio" class="text-decoration-none"><i class="fa-brands fa-facebook-f social-networks"></i></a></li>
+        <li><a href="https://www.instagram.com/combinedesigninteriors/" class="text-decoration-none"><i class="fa-brands fa-instagram social-networks"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/combine-design/" class="text-decoration-none"><i class="fa-brands fa-linkedin-in social-networks"></i></a></li>
+    </ul>
+</div>
+<section class="sub-banner_section">
+    <figure class="banner-backgroundimage mb-0">
+        <img src="{% static 'assets/images/services-banner-image-new4.png' %}" alt="" class="img-fluid">
+    </figure>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-12 col-12">
+                <div class="banner_content" data-aos="fade-up">
+                    <h1>Product Categories</h1>
+                   
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-6 col-md-4 col-sm-12 col-12 d-lg-block d-none">
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<!-- Projects -->
+<section class="projectpage-section">
+<div class="container-fluid"> 
+    <div class="row">
+        <div class="col-12">
+            <div class="subheading">
+                <h2>PRODUCT CATEGORIES</h2>
+            </div>
+        </div>
+    </div>
+    <div class="tabs-box tabs-options">
+       
+        
+        <div class="tab-content">
+
+            
+            <div id="residential" class="tab-pane fade in active show">
+                <div class="middle-image">
+                    <div class="row">
+
+                        {% for details in product_list  %}
+
+
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-12 p-0 pr-sm-1 py-md-1">
+                            <div class="image overlay">
+                                <figure class="tab-image mb-0">
+                                    <img
+                                        width="610"
+                                        height="750"
+                                        class="img-fluid"
+                                        src="{{details.image.url}}"
+                                        alt="image"
+                                     />
+                                </figure>
+                                <div class="icon icon5">
+                                    <h4>
+                                        <a class="ttm-btn btn-inline ttm-btn-size-md ttm-icon-btn-right ttm-btn-color-skincolor"
+                                           href="{% url 'webapp:product_detail' details.id %}">
+                                            View {{ details.category_name }}
+                                            <i class="fa fa-long-arrow-right"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        {% endfor %}
+                       
+                    </div>
+                </div>                   
+            </div>
+            
+        </div>
+    </div>
+</div>
+</section>
+
+{% endblock body %}

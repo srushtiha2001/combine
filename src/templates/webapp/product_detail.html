@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+
+{% block body %}
+
+
+<div class="social-icons position-relative">
+    <ul class="list-unstyled mb-0 position-absolute">
+        <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-twitter social-networks"></i></a></li>
+        <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-facebook-f social-networks"></i></a></li>
+        <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-instagram social-networks"></i></a></li>
+        <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-linkedin-in social-networks"></i></a></li>
+    </ul>
+</div>
+<section class="sub-banner_section">
+    <figure class="banner-backgroundimage mb-0">
+        <img src="{% static 'assets/images/services-banner-image-new4.png' %}" alt="" class="img-fluid">
+    </figure>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-12 col-12">
+                <div class="banner_content" data-aos="fade-up">
+                    <h1>{{product_detail}} products</h1>
+                   
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-6 col-md-4 col-sm-12 col-12 d-lg-block d-none">
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<!-- MAIN SECTION -->
+<!--End Slider Section-->
+<div class=" blog-posts blogpage-section">
+<div class="container">
+    <div class="row wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+        <div id="blog" class="col-xl-12">
+            <div class="row">
+
+                {% for details in product_list %}
+
+
+                <div class="col-xl-6">
+                    <div class="blog-box twocolumn-blog float-left w-100 post-item mb-4">
+                        <div class="post-item-wrap position-relative">
+                            <div class="post-image">
+                                <a href="{{ details.image.url }}">
+                                    <img
+                                        width="1920"
+                                    height="800"
+                                    class="img-fluid"
+                                    src="{{ details.image.url }}"
+                                    alt="project-01"
+                                  />
+                                </a>
+                            </div>
+                            <div class="lower-portion">
+                                <i class="fa-solid fa-user"></i>
+                                <span class="text-size-14 text-mr">By : Aristo </span>
+                                <i class="tag-mb fa-solid fa-tag"></i>
+                                <span class="text-size-14">{{details.product_name}}</span>
+                               
+                                <i class="mb-0 calendar-ml fa-solid fa-calendar-days"></i>
+                                <span class="mb-0 text-size-14">{{details.created_at.date}}</span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+            
+             </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+{% endblock body %}

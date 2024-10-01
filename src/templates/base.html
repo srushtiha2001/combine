@@ -1,0 +1,182 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <title>{{meta_title}}</title>
+    <!-- /SEO Ultimate -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta charset="utf-8">
+    <meta name="description" content="{{meta_description}}">
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'assets/images/favicon/apple-icon-57x57.png' %}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{% static 'assets/images/favicon//apple-icon-60x60.png' %}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'assets/images/favicon//apple-icon-72x72.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/images/favicon//apple-icon-76x76.png' %}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'assets/images/favicon//apple-icon-114x114.png' %}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{% static 'assets/images/favicon//apple-icon-120x120.png' %}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'assets/images/favicon//apple-icon-144x144.png' %}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{% static 'assets/images/favicon//apple-icon-152x152.png' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/images/favicon//apple-icon-180x180.png' %}">
+    <link rel="icon" type="image/png" sizes="192x192"  href="{% static 'assets/images/favicon//android-icon-192x192.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/images/favicon//favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'assets/images/favicon//favicon-96x96.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/images/favicon//favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'assets/images/favicon//manifest.json' %}">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Latest compiled and minified CSS -->
+    <link href="{% static 'assets/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/js/bootstrap.min.js' %}">
+    <!-- Font Awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- StyleSheet link CSS -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets/css/custom-style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets/css/special-classes.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'assets/css/responsive.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+<!-- Header  -->
+<div class="banner_outer">
+    <figure class="banner-background mb-0">
+        <img src="{% static 'assets/images/grey.png' %}" alt="" class="img-fluid">
+    </figure>
+    <header class="header">
+        <div class="main-header">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="/"><figure class="mb-0 banner-logo"><img src="{% static 'assets/images/combine.png' %}" alt="" class="img-fluid"></figure></a>
+                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'webapp:about' %}">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'webapp:our_work' %}">Our Works</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'webapp:product' %}">Products</a>
+                            </li>                            
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'webapp:style' %}">Our Styles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'webapp:post_list' %}">Our Blogs</a>
+                            </li>
+                            
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'webapp:contact' %}">Contact</a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    
+<div class="social-icons position-relative">
+        <ul class="list-unstyled mb-0 position-absolute">
+            <li><a href="https://twitter.com/design_combine" class="text-decoration-none"><i class="fa-brands fa-twitter social-networks"></i></a></li>
+            <li><a href="https://www.facebook.com/Combinedesigninteriordesingstudio" class="text-decoration-none"><i class="fa-brands fa-facebook-f social-networks"></i></a></li>
+            <li><a href="https://www.instagram.com/combinedesigninteriors/" class="text-decoration-none"><i class="fa-brands fa-instagram social-networks"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/combine-design/" class="text-decoration-none"><i class="fa-brands fa-linkedin-in social-networks"></i></a></li>
+            <li><a href="https://www.youtube.com/@combinedesign" class="text-decoration-none"><i class="fa-brands fa-youtube social-networks"></i></a></li>
+
+        </ul>
+       
+</div>
+    
+
+{% block body %}
+{% endblock body %}
+
+
+
+<section class="footer-section">
+    <figure class="left-lamp mb-0">
+        <img src="{% static 'assets/images/left-lamp.png' %}" alt="" class="img-fluid">
+    </figure>
+    <figure class="right-lamp mb-0">
+        <img src="{% static 'assets/images/right-lamp.png' %}" alt="" class="img-fluid">
+    </figure>
+    <div class="container">
+        <div class="middle-portion">
+            <div class="row">
+                <div class="col-12">
+                    <div class="logo-part">
+                        <a href="/"><figure class="footer-logo"><img src="{% static 'assets/images/combine.png' %}" alt=""></figure></a>
+                     
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+
+            <div class="row">
+                <div class="col-12">
+                    <ul class="links mb-0 list-unstyled">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="{% url 'webapp:about' %}">About US</a></li>
+                        <li><a href="{% url 'webapp:our_work' %}">Our Works</a></li>
+                        <li><a href="{% url 'webapp:product' %}">Products</a></li>
+                        <li><a href="{% url 'webapp:style' %}">Our Style</a></li>
+                        <li><a href="{% url 'webapp:post_list' %}">Blogs</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-lower">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-md-block d-none">
+                    <div class="social-icons position-relative">
+                        <ul class="list-unstyled mb-0 position-absolute">
+                            <li><a href="https://twitter.com/design_combine" class="text-decoration-none"><i class="fa-brands fa-twitter social-networks"></i></a></li>
+                            <li><a href="https://www.facebook.com/Combinedesigninteriordesingstudio" class="text-decoration-none"><i class="fa-brands fa-facebook-f social-networks"></i></a></li>
+                            <li><a href="https://www.instagram.com/combinedesigninteriors/" class="text-decoration-none"><i class="fa-brands fa-instagram social-networks"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/combine-design/" class="text-decoration-none"><i class="fa-brands fa-linkedin-in social-networks"></i></a></li>
+                            <li><a href="https://www.youtube.com/@combinedesign" class="text-decoration-none"><i class="fa-brands fa-youtube social-networks"></i></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <p class="mb-0 text-size-14">©2023 Combine Design, All Rights Reserved. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Latest compiled JavaScript -->
+<script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"> </script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"> </script>
+<script src="{% static 'assets/js/video_link.js' %}"></script>
+<script src="{% static 'assets/js/video.js' %}"></script>
+<script src="{% static 'assets/js/counter.js' %}"></script>
+<script src="{% static 'assets/js/owl.carousel.js' %}"></script>
+<script src="{% static 'assets/js/custom-carousel.js' %}"></script>
+<script src="{% static 'assets/js/custom.js' %}"></script>
+<script src="{% static 'assets/js/animation_links.js' %}"></script>
+<script src="{% static 'assets/js/animation.js' %}"></script>
+</body>
+</html>

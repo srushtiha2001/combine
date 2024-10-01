@@ -1,0 +1,279 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+{% block body %}
+
+<section class="sub-banner_section">
+    <figure class="banner-backgroundimage mb-0">
+        <img src="{% static 'assets/images/about-sub-banner-image-new.png' %}" alt="" class="img-fluid">
+    </figure>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-12 col-12">
+                <div class="banner_content" data-aos="fade-up">
+                    <h1>About Combine Design</h1>
+                    
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-6 col-md-4 col-sm-12 col-12 d-lg-block d-none">
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<!-- Choose -->
+<section class="about-section">
+    <figure class="about-backgroundimage mb-0">
+        <img src="{% static 'assets/images/about-backgroundimage.png' %}" alt="" class="img-fluid">
+    </figure>
+    <div class="container">
+        <div class="row position-relative">
+            <figure class="about-image mb-0" data-aos="fade-left">
+                <img src="{% static 'assets/images/home-about-us-section-image-new.png' %}" alt="" class="img-fluid">
+            </figure>
+            <div class="col-lg-5 col-md-2 col-sm-12 col-12 d-md-block d-none">
+            </div>
+            <div class="col-lg-7 col-md-10 col-sm-12 col-12">
+                <div class="about_content" data-aos="fade-right">
+                    <h2>About Combine Design</h2>
+                    <p class="text-size-16">WE ARE AN UNIQUE INTERIOR DESIGN COMPANY WITH A
+                        COMMITTED TEAM OF PROFESSIONAL DESIGNERS.</p>
+                    <p class="text-size-14">Interior design for each homeowner is a deeply personal
+                        journey. We’re here to help you create the perfect space
+                        for your needs, so you can finally make your dreams come
+                        true.We are proud to present you our best experience center in
+                        Banashankari. Our collection is updated every day with
+                        beautiful solutions and we are glad that you, our
+                        customers, support us on way!</p>
+    
+                    <!--p class="text-size-14"> We are proud to present you our best experience center in
+                        Banashankari. Our collection is updated every day with
+                        beautiful solutions and we are glad that you, our
+                        customers, support us on way!</p-->
+    
+    
+                        <p class="text-size-14"> Combine Design is a interior design firm that provides
+                            clients with the most innovative and quality work. We
+                            thrive on feedback and encouragement. We are very much
+                            grateful to our customers who support us in every possible
+                            way in our successful endeavours of latest updating in our
+                            design journey. Combine Design team has partnered with world-class brands
+                            and designers to create awe-inspiring spaces that inspire
+                            creativity, productivity and creativity.</p>
+                    <a class="read_more text-decoration-none" href="{% url 'webapp:about' %}">Read More
+                        <i class="dot fa-solid fa-circle-small"></i>
+                    </a>
+                    <div class="last_list">
+                        <figure class="header-headphoneicon mb-0"><img class="img-fluid" src="{% static 'assets/images/header-headphoneicon.png' %}" alt=""></figure>
+                        <div class="content">
+                            <span>Get Support</span>
+                            <a class="text-decoration-none last_list_atag" href="tel:9620200324">+91-96202-00324</a>
+                        </div>
+                    </div>
+                    <div class="badge c-black" id="badge">
+                        <span class="badge__char"> </span>
+                        <span class="badge__char">W</span>
+                        <span class="badge__char">E</span>
+                        <span class="badge__char"> </span>
+    
+                        <span class="badge__char">C</span>
+                        <span class="badge__char">R</span>
+                        <span class="badge__char">E</span>
+                        <span class="badge__char">A</span>
+                        <span class="badge__char">T</span>
+                        <span class="badge__char">E</span>
+                       
+                        <span class="mid-circle"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+<!-- Team -->
+<section class="team-section">
+    <figure class="right-lamp mb-0">
+        <img src="{% static 'assets/images/right-lamp.png' %}" alt="" class="img-fluid">
+    </figure>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="team_content">
+                    <h2 class="text-white">Meet Our Professional Team</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+    
+            {% for details in team_list %}
+            <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                <div class="team-box">
+                    <figure class="image mb-0">
+                        <img src="{{details.image.url}}" alt="" class="img-fluid">
+                    </figure>
+                    <figure class="imagecircle mb-0">
+                        <img src="{% static 'assets/images/team-imagecircle.png' %}" alt="" class="img-fluid">
+                    </figure>
+                    <div class="image-content">
+                        <figure class="content-bg mb-0">
+                            <img src="{% static 'assets/images/team-contentbg.png' %}" alt="" class="img-fluid">
+                        </figure>
+                        <div class="content">
+                            <h6>{{details.name}}</h6>
+                            <span class="text-size-14">{{details.designation}}</span>
+                            <ul class="list-unstyled mb-0 p-0 position-relative">
+                                <li><a href="{{details.facebook_link}}" class="text-decoration-none"><i class="fa-brands fa-facebook-f social-networks"></i></a></li>
+                                <li><a href="{{details.twitter_link}}" class="text-decoration-none"><i class="fa-brands fa-twitter social-networks"></i></a></li>
+                                <li><a href="{{details.linkedin_link}}" class="text-decoration-none"><i class="fa-brands fa-linkedin-in social-networks"></i></a></li>
+                                <li><a href="{{details.instagram_link}}" class="text-decoration-none"><i class="fa-brands fa-instagram social-networks"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+           
+        </div>
+    </div>
+    </section>
+<!-- Review -->
+<section class="review-section"> 
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12 p-0">
+                <div class="review-box">
+                    <figure class="icon">
+                        <img src="{% static 'assets/images/contract-icon.png' %}" alt="" class="img-fluid">
+                    </figure>
+                    <h5>Strategy - Led Interior Design</h5>
+                    <p class="text-size-14 mb-0">We work to ensure people’s comfort at their home, and
+                        to provide the best and the fastest help at fair
+                        prices. We stand for quality, safety and cred</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12 p-0">
+                <div class="review-box">
+                    <figure class="icon">
+                        <img src="{% static 'assets/images/handshake-icon.png' %}" alt="" class="img-fluid">
+                    </figure>
+                    <h5>Modern living quarter</h5>
+                    <p class="text-size-14 mb-0">Iterative approaches to the corporate strategy
+                        foster collaborative.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12 p-0">
+                <div class="review-box review-box3">
+                    <figure class="icon">
+                        <img src="{% static 'assets/images/chat-icon.png' %}" alt="" class="img-fluid">
+                    </figure>
+                    <h5>Interior Inter Art Design</h5>
+                    <p class="text-size-14 mb-0">We develop the full cycle of project
+                        documentation and full details.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+<!-- Testimonial -->
+<section class="testimonial-section"> 
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-12 order-md-1 order-3">
+                <div class="testimonial_wrapper position-relative" data-aos="fade-right">
+                    <figure class="testimonial-image1 mb-0">
+                        <img src="{% static 'assets/images/testimonial2.png' %}" alt="" class="img-fluid">
+                    </figure>                    
+                    <figure class="testimonial-image2 mb-0">
+                        <img src="{% static 'assets/images/testimonial-1.png' %}" alt="" class="img-fluid">
+                    </figure>                    
+                    <figure class="testimonial-image3 mb-0">
+                        <img src="{% static 'assets/images/testimonial-5.png' %}" alt="" class="img-fluid">
+                    </figure>                    
+                    <figure class="testimonial-image4 mb-0">
+                        <img src="{% static 'assets/images/testimonial-3.png' %}" alt="" class="img-fluid">
+                    </figure>
+                    <figure class="testimonial-image5 mb-0">
+                        <img src="{% static 'assets/images/testimonial-4.png' %}" alt="" class="img-fluid">
+                    </figure>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-12 col-12 order-md-2 order-2">
+                <div class="testimonial_carousel position-relative">
+                    <figure class="testimonial-line mb-0">
+                        <img src="{% static 'assets/images/testimonial-line.png' %}" alt="" class="img-fluid">
+                    </figure> 
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12 order-md-3 order-1">                
+                <div class="owl-carousel owl-theme">   
+    
+                    {% for details in testimonials %}
+                    <div class="item">
+                        <div class="testimonial_content">
+                            <h2>People Love Us</h2>
+                            <ul class="list-unstyled">
+                                <li><a href=""><i class="fa-solid fa-star"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-star"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-star"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-star"></i></a></li>
+                                <li><a href=""><i class="fa-solid fa-star"></i></a></li>
+                            </ul>
+                            <p class="text-size-18">{{details.content}}
+                            </p>
+                            <div class="content">
+                                <figure class="testimonial-contentimage mb-0">
+                                    <img style = width:126px ;
+                                    height:125px;
+                                    src="{{details.image.url}}" alt="" class="img-fluid">
+                                </figure>
+                                <div class="designation-outer">
+                                    <span>{{details.name}}</span>
+                                    <p class="text-size-16 mb-0">Customer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+<!-- Choose -->
+<section class="choose-section">
+    <div class="container">
+        <div class="row position-relative">
+            <figure class="choose-image mb-0">
+                <img src="{% static 'assets/images/why-choose-us-image-new1.png' %}" alt="" class="img-fluid">
+            </figure>
+            <h4 class="mb-0">Why Choose Us</h4>
+            <figure class="choose-arrow mb-0">
+                <img src="{% static 'assets/images/choose-arrow.png'%}" alt="" class="img-fluid">
+            </figure>
+            <div class="col-lg-7 col-md-12 col-sm-12 col-12">
+                <div class="choose_content" data-aos="fade-left">
+                    <h2>Why Choose Us</h2>
+                    <p class="text-size-16">WE STARTED OUR AESTHETIC JOURNEY IN 2008 AND THEN THERE IS
+                        NO TURNING BACK.</p>
+                    <ul class="list-unstyled mb-0">
+                        <li class="text text-size-14"><i class="circle fa-duotone fa-check"></i>Combine Design team has partnered with world-class brands
+                            and designers to create awe-inspiring spaces that inspire creativity, productivity and creativity. We are proud to
+                            now bring the same experience to you in Banashankari.</li>
+                        <li class="text text-size-14"><i class="circle fa-duotone fa-check"></i> Combine Design is a interior design firm that provides
+                            clients with the most innovative and quality work. We thrive on feedback and encouragement. We are very much grateful to our customers who support us in every possible
+                            way in our successful endeavours of latest updating in our design journey.</li>
+                        <li class="text text-size-14"><i class="circle fa-duotone fa-check"></i>WHEN YOU WORK TOGETHER, THERE'S NOTHING YOU CAN'T DO.</li>
+                        <li class="text text-size-14"><i class="circle fa-duotone fa-check"></i>Our designer are expertised in the process of improving
+                            a broken, damaged, or outdated structure. Additionally,bringing something back to life.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-2 col-sm-12 col-12 d-lg-block d-none">
+            </div>
+        </div>
+    </div>
+    </section>
+{% endblock body %}

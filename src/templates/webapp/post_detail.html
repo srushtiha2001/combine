@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+
+{% block body %}
+
+
+
+<div class="social-icons position-relative">
+    <ul class="list-unstyled mb-0 position-absolute">
+        <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-twitter social-networks"></i></a></li>
+        <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-facebook-f social-networks"></i></a></li>
+        <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-instagram social-networks"></i></a></li>
+        <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-linkedin-in social-networks"></i></a></li>
+    </ul>
+</div>
+<section class="sub-banner_section">
+    <figure class="banner-backgroundimage mb-0">
+        <img src="{% static 'assets/images/Contact-us-banner-image6.png' %}" alt="" class="img-fluid">
+    </figure>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-12 col-12">
+                <div class="banner_content" data-aos="fade-up">
+                    <h1>Blogs</h1>
+                   
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-6 col-md-4 col-sm-12 col-12 d-lg-block d-none">
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<!-- Single-blog -->
+<section class="singleblog-section">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+            <div class="main-box">
+                <h3>LIVING ROOM MAKEOVER WITH VETSAK</h3>
+                <span class="subheading text-size-18">Interior Design / 6MIN Read</span>
+               <!--<figure class="image1" data-aos="fade-up">
+                    <img src="{% static 'assets/images/singleblog-image1.jpg' %}" alt="" class="img-fluid">
+                </figure>-->
+                <div class="social-icons position-relative">
+                    <span class="number">26</span>
+                    <span class="month">Nov</span>
+                    <ul class="list-unstyled mb-0 position-absolute">
+                        <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-twitter social-networks"></i></a></li>
+                        <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-facebook-f social-networks"></i></a></li>
+                        <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-instagram social-networks"></i></a></li>
+                        <li><a href="#" class="text-decoration-none"><i class="fa-brands fa-linkedin-in social-networks"></i></a></li>
+                    </ul>
+                </div>                    
+                <div class="angelina-content">
+                    <figure class="angelinaclark-image" data-aos="flip-left">
+                        <img src="{{post_detail.image.url}}" alt="" class="img-fluid">
+                    </figure>
+                    <span class="angelina-name text-size-16">combine design</span>
+                    
+                </div>
+                <div class="content1">
+                    <p>{{post_detail.content}}</p>
+                    <h4>{{post_detail.title1}}</h4>
+                    <p>{{post_detail.content1}}</p>
+                    <h4>{{post_detail.title2}}</h4>
+                    <p>{{post_detail.content2}}</p>
+                    <h2>{{post_detail.title3}}</h2>
+                    <p>{{post_detail.content3}}</p>
+                    <h2>{{post_detail.title4}}</h2>
+                    <p>{{post_detail.content4}}</p>
+                    <h2>{{post_detail.title5}}</h2>
+                    <p>{{post_detail.content5}}</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+{% endblock body %}
